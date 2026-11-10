@@ -10,12 +10,14 @@
   <!-- thumbs-up hand -->
   <g clip-path="url(#rg-clip)" fill="#fff" stroke="#000" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
     <!-- right & bottom edges sit under the frame so the border stays 11 wide on every side -->
-    <path d="M293.5 400 V165 Q293.5 148 276 148 Q258 148 258 165 V207
-             C228 205 197 214 197 242 C197 265 211 277 232 277
-             C210 277 197 289 197 307 C197 325 210 336 232 336
-             C210 336 197 348 197 365 C197 383 209 393.5 231 393.5
+    <!-- built from capsules: thumb r≈18; fingers are half-circles (r 34 / 28 / 28.75)
+         that taper and recede downward; curves are tangent-continuous, corners only at finger joins -->
+    <path d="M293.5 400 V166 A17.75 17.75 0 0 0 258 166 V203 Q258 212 249 212
+             H228 C209.2 212 194 227.2 194 246 C194 264.8 209.2 280 228 280
+             C212.5 280 200 292.5 200 308 C200 323.5 212.5 336 228 336
+             C212.1 336 201 348.9 201 364.75 C201 380.6 212.1 393.5 228 393.5
              H300 V400 Z"/>
-    <path d="M232 277 H252 M232 336 H252" fill="none"/>
+    <path d="M228 280 H254 M228 336 H254" fill="none"/>
   </g>
   <!-- window frame -->
   <rect x="5.5" y="5.5" width="289" height="389" rx="6" fill="none" stroke="#000" stroke-width="11"/>
