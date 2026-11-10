@@ -27,8 +27,11 @@
     /* Nav */
     nav { position: sticky; top: 0; z-index: 10; background: rgba(246, 245, 241, .9); backdrop-filter: blur(10px); border-bottom: 2px solid var(--line); }
     nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 1.35rem; letter-spacing: .02em; }
-    .brand img { height: 38px; }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand img { height: 40px; }
+    .brand-text { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+    .brand-text b { font-weight: 900; font-size: 1.4rem; letter-spacing: .02em; }
+    .brand-text small { font-weight: 700; font-size: .75rem; letter-spacing: .7em; margin: 4px -.7em 0 0; }
     nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; font-weight: 500; }
     nav ul a { position: relative; }
     nav ul a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -3px; height: 2px; background: var(--ink); transition: right .2s; }
@@ -88,7 +91,6 @@
 
     @media (max-width: 720px) {
       nav ul { gap: 16px; font-size: .9rem; }
-      .brand span { display: none; }
       .about { grid-template-columns: 1fr; }
       .btn.ghost { margin: 14px 0 0 0; }
       .hero { padding: 56px 0 70px; }
@@ -101,7 +103,7 @@
 <body>
   <nav>
     <div class="wrap">
-      <a href="#" class="brand"><img src="assets/logo-mark.svg" alt=""><span>RIPPLE</span></a>
+      <a href="#" class="brand"><img src="assets/logo-mark.svg" alt=""><span class="brand-text"><b>RIPPLE</b><small>GAME</small></span></a>
       <ul>
         <li><a href="#games">Games</a></li>
         <li><a href="#about">About</a></li>
