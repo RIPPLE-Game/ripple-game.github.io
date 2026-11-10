@@ -2,9 +2,10 @@
   <clipPath id="rg-clip"><rect width="300" height="400" rx="10"/></clipPath>
   <rect width="300" height="400" rx="10" fill="#000"/>
   <!-- ghost -->
-  <path d="M11 389 V185 A117 92 0 0 1 245 185 V389 Z" fill="#fff"/>
-  <circle cx="124" cy="146" r="8.5" fill="#000"/>
-  <circle cx="160" cy="146" r="8.5" fill="#000"/>
+  <!-- head is a true circle (r 134), centred between the eyes; right side hides behind the hand -->
+  <path d="M11 389 V235 A134 134 0 0 1 279 235 V389 Z" fill="#fff"/>
+  <circle cx="128" cy="150" r="8.5" fill="#000"/>
+  <circle cx="162" cy="150" r="8.5" fill="#000"/>
   <!-- thumbs-up hand -->
   <g clip-path="url(#rg-clip)" fill="#fff" stroke="#000" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
     <!-- right & bottom edges sit under the frame so the border stays 11 wide on every side -->
