@@ -39,15 +39,6 @@
 
     /* Hero */
     .hero { position: relative; overflow: hidden; padding: 80px 0 90px; text-align: center; }
-    .ripples { position: absolute; left: 50%; top: 42%; pointer-events: none; }
-    .ripples span { position: absolute; left: -150px; top: -150px; width: 300px; height: 300px; border-radius: 50%; border: 2px solid var(--ink); opacity: 0; animation: ripple 8s linear infinite; }
-    .ripples span:nth-child(2) { animation-delay: 2s; }
-    .ripples span:nth-child(3) { animation-delay: 4s; }
-    .ripples span:nth-child(4) { animation-delay: 6s; }
-    @keyframes ripple {
-      0% { transform: scale(.6); opacity: .35; }
-      100% { transform: scale(4.5); opacity: 0; }
-    }
     .hero-logo { position: relative; width: min(240px, 60vw); animation: pop .7s cubic-bezier(.3, 1.6, .5, 1) both; }
     @keyframes pop { from { transform: scale(.6) translateY(20px); opacity: 0; } }
     .hero p { position: relative; max-width: 520px; margin: 28px auto 32px; color: var(--muted); font-size: 1.15rem; }
@@ -96,7 +87,7 @@
       .hero { padding: 56px 0 70px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .ripples span, .hero-logo { animation: none; }
+      .hero-logo { animation: none; }
     }
   </style>
 </head>
@@ -113,7 +104,6 @@
   </nav>
 
   <header class="hero">
-    <div class="ripples"><span></span><span></span><span></span><span></span></div>
     <div class="wrap">
       <img class="hero-logo" src="assets/logo.svg" alt="RIPPLE Game">
       <p>An independent studio crafting relaxing, satisfying mobile games for players everywhere.</p>
