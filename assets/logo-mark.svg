@@ -7,10 +7,11 @@
   <circle cx="160" cy="146" r="8.5" fill="#000"/>
   <!-- thumbs-up hand -->
   <g clip-path="url(#rg-clip)" fill="#fff" stroke="#000" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M286 400 V163 Q286 148 271 148 Q255 148 255 163 V207
-             C226 205 197 214 197 242 C197 265 211 277 232 277
+    <!-- right & bottom edges sit under the frame so the border stays 11 wide on every side -->
+    <path d="M293.5 400 V165 Q293.5 148 276 148 Q258 148 258 165 V207
+             C228 205 197 214 197 242 C197 265 211 277 232 277
              C210 277 197 289 197 307 C197 325 210 336 232 336
-             C210 336 197 348 197 364 C197 381 209 392 231 392
+             C210 336 197 348 197 365 C197 383 209 393.5 231 393.5
              H300 V400 Z"/>
     <path d="M232 277 H252 M232 336 H252" fill="none"/>
   </g>
