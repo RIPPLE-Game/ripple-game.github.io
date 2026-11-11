@@ -57,15 +57,10 @@
     .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
     .game { background: var(--paper); border: 2px solid var(--ink); border-radius: 18px; overflow: hidden; box-shadow: 6px 6px 0 var(--ink); transition: transform .15s, box-shadow .15s; }
     a.game:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--ink); }
-    .game-art { aspect-ratio: 16 / 10; display: grid; place-items: center; font-size: 3.5rem; background: var(--ink); color: #fff; border-bottom: 2px solid var(--ink); }
+    .game-art { aspect-ratio: 1024 / 500; overflow: hidden; display: grid; place-items: center; font-size: 3.5rem; background: var(--ink); color: #fff; border-bottom: 2px solid var(--ink); }
     .game-art.light { background: repeating-linear-gradient(45deg, #fff 0 14px, #eee 14px 28px); }
-    .game-art.shots { position: relative; overflow: hidden; background: radial-gradient(circle at 26% 50%, #2e3352, #1c1f2c 72%); }
-    .game-art .icon { position: absolute; left: 8%; top: 50%; width: 34%; height: auto; transform: translateY(-50%); border-radius: 22%; box-shadow: 0 10px 26px rgba(0, 0, 0, .5); }
-    .game-art .shot { position: absolute; width: 27%; border-radius: 10px; border: 2px solid #343a57; box-shadow: 0 10px 22px rgba(0, 0, 0, .5); }
-    .game-art .shot.s1 { right: 31%; top: 14%; transform: rotate(-6deg); }
-    .game-art .shot.s2 { right: 5%; top: 7%; transform: rotate(5deg); }
-    a.game:hover .icon { transform: translateY(-50%) scale(1.04); }
-    .game-art .icon { transition: transform .2s; }
+    .game-art .feature { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+    a.game:hover .feature { transform: scale(1.03); }
     .game-body { padding: 20px 22px 24px; }
     .game-body h3 { margin: 0 0 6px; font-size: 1.3rem; font-weight: 700; }
     .game-body p { margin: 0 0 16px; color: var(--muted); font-size: .95rem; }
@@ -127,10 +122,8 @@
       <div class="games">
         <!-- One .game block per game. Images live in assets/games/<game>/ -->
         <a class="game" href="https://play.google.com/store/apps/details?id=com.ripplegame.snakeoutescapepuzzle" target="_blank" rel="noopener">
-          <div class="game-art shots">
-            <img class="icon" src="assets/games/snake-out/icon.png" alt="Snake Out: Escape Puzzle icon" width="256" height="256">
-            <img class="shot s1" src="assets/games/snake-out/shot2.jpg" alt="Snake Out gameplay: an easy level" loading="lazy">
-            <img class="shot s2" src="assets/games/snake-out/shot1.jpg" alt="Snake Out gameplay: a maze full of snakes" loading="lazy">
+          <div class="game-art">
+            <img class="feature" src="assets/games/snake-out/feature.jpg" alt="Snake Out: Escape Puzzle" width="1024" height="500">
           </div>
           <div class="game-body">
             <h3>Snake Out: Escape Puzzle</h3>
